@@ -125,9 +125,9 @@ const TeamModal = ({ isOpen, onClose }) => {
 
     // ข้อมูลสมาชิก (เปลี่ยนชื่อและรูปภาพได้ตามต้องการ)
     const teamMembers = [
-        { no: "66099910", name: "วรธนเวธน์ ณีศะนันทร์", img: "/src/picture/worathanawet.jpg" },
-        { no: "66080240", name: "วรเดช อาจวิชัย", img: "/src/picture/woradech.jpg" },
-        { no: "66092117", name: "ณัฐดนัย รอดมุ้ย", img: "/src/picture/nutdanai.png" },
+        { no: "66099910", name: "วรธนเวธน์ ณีศะนันทร์", img: "/picture/worathanawet.jpg" },
+        { no: "66080240", name: "วรเดช อาจวิชัย", img: "/picture/woradech.jpg" },
+        { no: "66092117", name: "ณัฐดนัย รอดมุ้ย", img: "/picture/nutdanai.png" },
     ];
 
     return (
