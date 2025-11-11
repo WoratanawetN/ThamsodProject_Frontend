@@ -52,11 +52,13 @@ export function AuthProvider({ children }) {
         setToken(newToken);
         setRoleJoined(roleJoined);
 
-        try {
-            const decodedUser = await authApi.getMe(newToken);
-            setUser(decodedUser);
-        } catch (error) {
-            console.error("Failed to fetch user after login:", error);
+        if (roleJoined === "host") {
+            try {
+                const decodedUser = await authApi.getMe(newToken);
+                setUser(decodedUser);
+            } catch (error) {
+                console.error("Failed to fetch user after login:", error);
+            }
         }
     };
 
