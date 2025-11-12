@@ -191,7 +191,7 @@ const ViewerDisplay = () => {
         const handleGuestCountUpdated = (newGuestCount) => {
             setSession((prev) => ({
                 ...prev,
-                guestCount: newGuestCount,
+                guestCount: newGuestCount.guestCount,
             }));
         }
 

@@ -27,7 +27,7 @@ const GuestJoin = () => {
     const [searchParams] = useSearchParams(); // ดึง ?role=... จาก URL
 
     // 2. ดึง Role มาไว้ข้างนอก เพื่อใช้กับ JSX
-    const role = searchParams.get("role") || "guest"; // default เป็น guest
+    const role = searchParams.get("role"); // default เป็น guest
     const sessionCodeParam = searchParams.get("session");
     if (sessionCodeParam && !sessionCode && sessionCodeParam.length === 6) {
         setSessionCode(sessionCodeParam.toUpperCase());

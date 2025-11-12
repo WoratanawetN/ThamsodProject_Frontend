@@ -63,7 +63,6 @@ const HostSessionManager = () => {
             try {
                 const res = await getSessionQuestions(sessionId);
                 setQuestions(res.data.data);
-                console.log("Fetched questions:", res.data.data);
             } catch (error) {
                 console.error("Failed to fetch questions:", error);
             } finally {
@@ -141,7 +140,7 @@ const HostSessionManager = () => {
         const handleGuestCountUpdated = (updatedGuestCount) => {
             setSession((prev) => ({
                 ...prev,
-                guestCount: updatedGuestCount,
+                guestCount: updatedGuestCount.guestCount,
             }));
         };
 
